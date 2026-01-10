@@ -1,0 +1,22 @@
+data:
+  raw_path: "data/raw/churn.csv"
+  processed_path: "data/processed/"
+  test_size: 0.2
+  random_state: 42
+  
+features:
+  numerical: ["tenure", "MonthlyCharges", "TotalCharges"]
+  categorical: ["gender", "SeniorCitizen", "Partner", "Dependents",
+                "PhoneService", "MultipleLines", "InternetService",
+                "OnlineSecurity", "OnlineBackup", "DeviceProtection",
+                "TechSupport", "StreamingTV", "StreamingMovies",
+                "Contract", "PaperlessBilling", "PaymentMethod"]
+  
+model:
+  random_state: 42
+  cv_folds: 5
+  scoring: "roc_auc"
+  
+deployment:
+  model_path: "models/churn_model.pkl"
+  preprocessor_path: "models/preprocessor.pkl"
