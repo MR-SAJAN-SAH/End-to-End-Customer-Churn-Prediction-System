@@ -8,11 +8,7 @@ from sklearn.metrics import roc_auc_score
 
 from preprocessing import preprocess_pipeline
 
-
-# =========================
 # Path Configuration
-# =========================
-
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DATA_PATH = os.path.join(
@@ -30,8 +26,6 @@ FEATURES_PATH = os.path.join(MODELS_DIR, "feature_names.json")
 
 def train_models():
     print("\n Starting model training...\n")
-
-    # Ensure models directory exists
     os.makedirs(MODELS_DIR, exist_ok=True)
 
     # Load and preprocess data (with feature names)
@@ -56,9 +50,7 @@ def train_models():
     best_model = None
     best_score = 0.0
 
-    # =========================
     # Model Training & Selection
-    # =========================
     for name, model in models.items():
         model.fit(X_train, y_train)
         probs = model.predict_proba(X_test)[:, 1]
@@ -70,9 +62,7 @@ def train_models():
             best_score = score
             best_model = model
 
-    # =========================
-    # Save Artifacts
-    # =========================
+    #saving the model
     joblib.dump(best_model, MODEL_PATH)
     joblib.dump(scaler, SCALER_PATH)
 
