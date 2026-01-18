@@ -1,22 +1,53 @@
-data:
-  raw_path: "data/raw/churn.csv"
-  processed_path: "data/processed/"
-  test_size: 0.2
+# Configuration File
+
+project:
+  name: "End-to-End Customer Churn Prediction System"
+  version: "1.0.0"
+  description: "Machine learning system to predict customer churn using structured customer data"
+  author: "Sajan Sah"
+  domain: "Telecommunications"
+
+paths:
+  data:
+    raw: "data/raw/telco_customer_churn_dataset.csv"
+  models:
+    directory: "models/"
+    model_file: "models/churn_model.pkl"
+    scaler_file: "models/scaler.pkl"
+    feature_names_file: "models/feature_names.json"
+
+training:
+  test_size: 0.20
   random_state: 42
-  
-features:
-  numerical: ["tenure", "MonthlyCharges", "TotalCharges"]
-  categorical: ["gender", "SeniorCitizen", "Partner", "Dependents",
-                "PhoneService", "MultipleLines", "InternetService",
-                "OnlineSecurity", "OnlineBackup", "DeviceProtection",
-                "TechSupport", "StreamingTV", "StreamingMovies",
-                "Contract", "PaperlessBilling", "PaymentMethod"]
-  
-model:
-  random_state: 42
-  cv_folds: 5
-  scoring: "roc_auc"
-  
+  stratify: true
+
+models:
+  logistic_regression:
+    max_iter: 1000
+    solver: "lbfgs"
+
+  random_forest:
+    n_estimators: 300
+    max_depth: 10
+    random_state: 42
+    n_jobs: -1
+
+evaluation:
+  primary_metric: "ROC-AUC"
+  secondary_metrics:
+    - "Precision"
+    - "Recall"
+    - "F1-Score"
+    - "Confusion Matrix"
+
 deployment:
-  model_path: "models/churn_model.pkl"
-  preprocessor_path: "models/preprocessor.pkl"
+  framework: "Streamlit"
+  threshold:
+    low_risk: 0.15
+    medium_risk: 0.30
+    high_risk: 0.50
+
+explainability:
+  enabled: true
+  method: "Logistic Regression Coefficients"
+  top_features: 10
