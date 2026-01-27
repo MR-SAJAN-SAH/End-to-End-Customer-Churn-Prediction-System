@@ -8,7 +8,7 @@ The project demonstrates industry-standard machine learning engineering practice
 
 ## Problem Statement
 
-Predict whether a customer is likely to churn (leave the service) based on historical customer demographics, service usage, and billing information.
+Predict whether a customer is likely to churn (leave the service) based on historical customer demographics, service usage, and the billing information.
 
 ### Business Objective:
 Enable proactive customer retention by identifying high-risk customers early.
