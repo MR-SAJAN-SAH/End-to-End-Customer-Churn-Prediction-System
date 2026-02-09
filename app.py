@@ -4,7 +4,6 @@ import streamlit as st
 import joblib
 import pandas as pd
 
-#Path Handling
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 MODEL_PATH = os.path.join(PROJECT_ROOT, "models", "churn_model.pkl")
