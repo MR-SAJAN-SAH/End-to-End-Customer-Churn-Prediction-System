@@ -113,7 +113,7 @@ Features:
      streamlit run app.py
 
 7. Then Open in browser:
-     http://localhost:8501
+     http://localhost:8502
 
 ```
 <p align="center">
@@ -128,7 +128,7 @@ Features:
 - Streamlit
 - Joblib
 
-## Key Highlights (Recruiter View)
+## Key Highlights
 
 - End-to-end ML pipeline
 - Proper model evaluation on imbalanced data
