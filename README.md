@@ -33,7 +33,7 @@ The system follows a complete machine learning lifecycle:
 
 ## Models Used
 
-Multiple classification models were trained and evaluated:
+Multiple classification model were trained and evaluated:
 - Logistic Regression:-	Baseline & interpretable model
 - Random Forest:- Non-linear ensemble comparison
 #### Final Model Selection
