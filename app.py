@@ -2,7 +2,6 @@ import os
 import json
 import streamlit as st
 import joblib
-import pandas as pd
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
