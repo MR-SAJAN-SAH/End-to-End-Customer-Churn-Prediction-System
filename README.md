@@ -11,7 +11,7 @@ The project demonstrates industry-standard machine learning engineering practice
 Predict whether a customer is likely to churn (leave the service) based on historical customer demographics, service usage, and the billing information.
 
 ### Business Objective:
-Enable proactive customer retention by identifying high-risk customers early.
+Enable proactive customer retention by identifying high-risk customer early.
 
 ## Solution Approach
 
