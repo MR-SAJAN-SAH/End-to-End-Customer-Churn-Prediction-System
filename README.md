@@ -1,7 +1,7 @@
 # End-to-End Customer Churn Prediction System
 ## Overview
 
-Customer churn is a critical challenge for subscription-based businesses, directly impacting revenue and long-term growth.
+Customer churn is a critical challenge for subscription-based businesses, directly impacting revenue and long-term growths.
 This project presents a production-ready, end-to-end machine learning system that predicts customer churn using structured customer data and deploys the trained model as an interactive web application.
 
 The project demonstrates industry-standard machine learning engineering practices, including data preprocessing, model selection, evaluation, explainability, and deployment.
